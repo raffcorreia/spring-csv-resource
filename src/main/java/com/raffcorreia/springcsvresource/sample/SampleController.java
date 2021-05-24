@@ -1,5 +1,6 @@
 package com.raffcorreia.springcsvresource.sample;
 
+import com.raffcorreia.springcsvresource.model.BandMember;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -17,7 +18,7 @@ public class SampleController {
 
     @RequestMapping(value = "band/members", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public List<String> getBandMembers() {
+    public List<BandMember> getBandMembers() {
         return sampleService.getBandMembers();
     }
 }

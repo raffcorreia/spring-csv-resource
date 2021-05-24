@@ -1,5 +1,6 @@
 package com.raffcorreia.springcsvresource.sample;
 
+import com.raffcorreia.springcsvresource.model.BandMember;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -9,7 +10,7 @@ import java.util.List;
 public class SampleService {
 
 
-    public List<String> getBandMembers() {
-        return Arrays.asList("A", "B", "C");
+    public List<BandMember> getBandMembers() {
+        return Arrays.asList(new BandMember(1, "A", "some role", 1983), new BandMember(2, "B", "Another role", 1972));
     }
 }
